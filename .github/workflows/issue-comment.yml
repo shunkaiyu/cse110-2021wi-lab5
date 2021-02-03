@@ -1,0 +1,19 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Some Comment
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  comment:
+    if: 
+    runs-on:
+    steps:
+      - name:
+        uses:
+        id:
+        with:
+          GITHUB_TOKEN:  
+          GIPHY_TOKEN:
+          comment_type:

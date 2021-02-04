@@ -10,10 +10,11 @@ jobs:
     if: github.event_name == 'issues'
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v1
       - name: Add funny comment
         uses: shunkaiyu/lab4@v2.1
         id: FunnyComment
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+         #GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
           GIPHY_TOKEN: ${{ secrets.GIPHY_TOKEN }}
           comment_type: 'gif'

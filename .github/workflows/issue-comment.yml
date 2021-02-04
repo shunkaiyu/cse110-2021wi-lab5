@@ -7,13 +7,13 @@ on:
 
 jobs:
   comment:
-    if: 
-    runs-on:
+    if: github.event_name == 'issues'
+    runs-on: ubuntu-latest
     steps:
-      - name:
-        uses:
-        id:
+      - name: Add funny comment
+        uses: Marta83/funny-comment-action@v2.1
+        id: FunnyComment
         with:
-          GITHUB_TOKEN:  
-          GIPHY_TOKEN:
-          comment_type:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+          GIPHY_TOKEN: ${{ secrets.GIPHY_TOKEN }}
+          comment_type: 'gif'

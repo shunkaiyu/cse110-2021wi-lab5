@@ -4,7 +4,6 @@ name: Some Comment
 on:
   issues:
     types: [opened]
-
 jobs:
   comment:
     if: github.event_name == 'issues'
